@@ -18,12 +18,12 @@ setup(
             "nko2latin=nkotranslit.cli:nko_to_latin_cli",
         ]
     },
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "Natural Language :: Bambara",
-        "Natural Language :: N'Ko",
-        "License :: OSI Approved :: MIT License",
-        "Intended Audience :: Developers",
-        "Topic :: Text Processing :: Linguistic",
-    ],
+        classifiers=[
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: MIT License",
+            "Intended Audience :: Developers",
+            "Topic :: Text Processing :: Linguistic",
+            "Natural Language :: Other",
+        ]
+
 )
