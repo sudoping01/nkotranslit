@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="nkotranslit",    
-    version="0.1.0",
+    version="1.0.0",
     description="A bidirectional Latin ↔ N'Ko transliteration library for Bamanankan.",
     author="sudopnig01@gmail.com",
     author_email="sudopnig01@gmail.com",
