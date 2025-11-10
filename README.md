@@ -19,16 +19,16 @@ pip install nkotranslit
 
 ## Usage
 
-### Python
-
 ```python
-from nkotranslit import Latin2Nko, Nko2Latin
+from nkotranslit import NkoLatinConverter
 
-converter = Latin2Nko()
-print(converter.convert("i ye san joli ye"))
+converter = NkoLatinConverter()
 
-converter2 = Nko2Latin()
-print(converter2.convert("ߌ ߦߋ ߛߊ߲ ߖߏߟߌ ߦߋ"))
+text = "i ye san joli ye"
+print(converter.convert_text(text, converter.LATIN_TO_NKO_RULES))
+
+nko = "ߌ ߦߋ ߛߊ߲ ߖߏߟߌ ߦߋ"
+print(converter.convert_text(nko, converter.NKO_TO_LATIN_RULES))
 ```
 
 ### CLI
