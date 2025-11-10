@@ -15,12 +15,13 @@ setup(
     include_package_data=True,
     python_requires=">=3.7",
     install_requires=[
-        # No external dependencies for now
+       "customtkinter"
     ],
     entry_points={
         "console_scripts": [
             "latin2nko=nkotranslit.cli:latin_to_nko_cli",
             "nko2latin=nkotranslit.cli:nko_to_latin_cli",
+            "nkotranslit-gui=nkotranslit.cli:launch_gui_cli",
         ]
     },
     classifiers=[
