@@ -1,14 +1,13 @@
-from nkotranslit.nko2latin import Nko2Latin
-from nkotranslit.latin2nko import Latin2Nko
+from nkotranslit.convert import NkoLatinConverter
 
 def latin_to_nko_cli():
     import sys
-    converter = Latin2Nko()
+    converter =NkoLatinConverter()
     sentence = " ".join(sys.argv[1:])
-    print(converter.convert(sentence))
+    print(converter.convert_text(sentence, converter.LATIN_TO_NKO_RULES))
 
 def nko_to_latin_cli():
     import sys
-    converter = Nko2Latin()
+    converter = NkoLatinConverter()
     sentence = " ".join(sys.argv[1:])
-    print(converter.convert(sentence))
+    print(converter.convert_text(sentence, converter.NKO_TO_LATIN_RULES))
