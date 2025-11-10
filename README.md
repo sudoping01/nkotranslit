@@ -1,15 +1,29 @@
 
 
-
 # nkotranslit
 
-A simple Python library for bidirectional **Latin ↔ N'Ko transliteration** 
+[![PyPI](https://img.shields.io/pypi/v/nkotranslit.svg)](https://pypi.org/project/nkotranslit/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/nkotranslit.svg)](https://pypi.org/project/nkotranslit/)
+[![License](https://img.shields.io/pypi/l/nkotranslit.svg)](https://github.com/sudoping01/nkotranslit/blob/main/LICENSE)
+
+
+A lightweight Python package for bidirectional **Latin ↔ N'Ko transliteration** 
 
 ## Features
+- Convert Latin script to N'Ko  
+- Convert N'Ko script to Latin  
+- Command-line interface (CLI)  
+- Graphical User Interface (GUI)
 
-- Convert Latin script to N'Ko.
-- Convert N'Ko script to Latin.
-- Command-line interface for quick use.
+
+## GUI Requirement
+
+The GUI requires Tkinter, which must be installed at system level.
+
+On Ubuntu/Debian:
+```bash 
+    sudo apt install python3-tk
+```
 
 ## Installation
 
@@ -38,9 +52,17 @@ latin2nko "i ye san joli ye"
 nko2latin "ߌ ߦߋ ߛߊ߲ ߖߏߟߌ ߦߋ"
 ```
 
-## License
+### GUI
 
-MIT
+Launch the graphical interface:
+```bash
+nkotranslit-gui
+```
+
+This opens a simple window where you can type text and convert between:
+- Latin → N'Ko
+- N'Ko → Latin
+
 
 
 
