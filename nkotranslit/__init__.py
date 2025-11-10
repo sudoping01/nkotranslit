@@ -1,8 +1,7 @@
-from nkotranslit.latin2nko import Latin2Nko
-from nkotranslit.nko2latin import Nko2Latin
+from nkotranslit.convert import NkoLatinConverter
 
-__VERSION__ = '0.1.0'
+__VERSION__ = '1.0.0'
 __all__ = [
-        'Latin2Nko', 
-        'Nko2Latin'
+        'NkoLatinConverter',    
 ]
+
