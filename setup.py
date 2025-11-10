@@ -1,9 +1,14 @@
 from setuptools import setup, find_packages
 
+with open('README.md', encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name="nkotranslit",    
-    version="1.0.0",
+    version="1.0.1",
     description="A bidirectional Latin ↔ N'Ko transliteration library for Bamanankan.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     author="sudopnig01@gmail.com",
     author_email="sudopnig01@gmail.com",
     packages=find_packages(),
@@ -29,5 +34,4 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
     ],
-
 )
