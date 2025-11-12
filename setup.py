@@ -5,11 +5,11 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name="nkotranslit",    
-    version="1.1.0",
+    version="1.1.1",
     description="A bidirectional Latin ↔ N'Ko transliteration library for Bamanankan.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="sudopnig01@gmail.com",
+    author="sudopnig01, Allasera Tapo et al",
     author_email="sudopnig01@gmail.com",
     packages=find_packages(),
     include_package_data=True,
