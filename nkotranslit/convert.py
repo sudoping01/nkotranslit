@@ -75,16 +75,18 @@ class NkoLatinConverter:
                 ("A", "ߊ"),
                 ("E", "ߋ"),  # close-mid 'e'
                 ("È", "ߍ"),  # open-mid 'ɛ'
+                 ("ɛ", "ߍ"),
                 ("I", "ߌ"),
-                ("O", "ߐ"),  # close-mid 'o'
-                ("Ò", "ߏ"),  # open-mid 'ɔ'
+                ("O", "ߏ"),  # close-mid 'o'
+                ("Ò", "ߐ"),  # open-mid 'ɔ' 
+                 ("ɔ", "ߐ"),
                 ("U", "ߎ"),
                 ("a", "ߊ"),
                 ("e", "ߋ"),
                 ("è", "ߍ"),
                 ("i", "ߌ"),
-                ("o", "ߐ"),
-                ("ò", "ߏ"),
+                ("o", "ߏ"), 
+                ("ò", "ߐ"),
                 ("u", "ߎ"),
                 # 4. Standard Consonants
                 ("B", "ߓ"),
@@ -125,13 +127,26 @@ class NkoLatinConverter:
                 ("w", "ߥ"),
                 ("y", "ߦ"),
                 ("z", "ߖ"),
+                ("ɲ", "ߢ"),   
+                ("ŋ", "ߣ߭"),
+                ("ng", "ߣ߭"),
                 # 5. Punctuation
                 ("?", "؟"),
                 (";", "؛"),
                 # (.,! are often the same, but N'Ko-specific ones exist)
+                ("0", "߀"),
+                ("1", "߁"),
+                ("2", "߂"),
+                ("3", "߃"),
+                ("4", "߄"),
+                ("5", "߅"),
+                ("6", "߆"),
+                ("7", "߇"),
+                ("8", "߈"),
+                ("9", "߉"),
+
             ]
         )
-
 
         self.NKO_TO_LATIN_RULES = OrderedDict(
             [
@@ -139,9 +154,11 @@ class NkoLatinConverter:
                 ("ߊ߲", "an"),
                 ("ߋ߲", "en"),
                 ("ߍ߲", "èn"),
+                ("ߍ߲", "ɛn"),
                 ("ߌ߲", "in"),
-                ("ߐ߲", "on"),
-                ("ߏ߲", "òn"),
+                ("ߏ߲", "on"),
+                ("ߐ߲", "òn"), 
+                ("ߐ߲", "ɔn"),
                 ("ߎ߲", "un"),
                 # 2. Tone Markers (strip them, as per standard Latin orthography)
                 ("߰", ""),  # NKO SYLLABLE TONE KI (HIGH)
@@ -158,9 +175,11 @@ class NkoLatinConverter:
                 ("ߊ", "a"),
                 ("ߋ", "e"),  # close-mid 'e'
                 ("ߍ", "è"),  # open-mid 'ɛ'
+                ("ߍ", "ɛ"),
                 ("ߌ", "i"),
-                ("ߐ", "o"),  # close-mid 'o'
-                ("ߏ", "ò"),  # open-mid 'ɔ'
+                ("ߏ", "o"),  # close-mid 'o' 
+                ("ߐ", "ò"),  # open-mid 'ɔ'
+                ("ߐ", "ɔ"),
                 ("ߎ", "u"),
                 # 5. Standard Consonants
                 ("ߓ", "b"),
@@ -180,11 +199,28 @@ class NkoLatinConverter:
                 ("ߕ", "t"),
                 ("ߥ", "w"),
                 ("ߦ", "y"),  # Handle 'y' after 'ny'
+
+                ("ߢ","ɲ"),    
+                ("ߣ߭","ŋ"), 
+                ("ߣ߭","ng"),
+
                 # 6. N'Ko Punctuation
                 ("߸", ", "),  # NKO COMMA (add space for readability)
                 ("߹", ". "),  # NKO EXCLAMATION MARK (often used as 'la' / period)
                 ("؟", "?"),
                 ("؛", ";"),
+                # 7. N'Ko Digits
+                ("߀", "0"), 
+                ("߁", "1"), 
+                ("߂", "2"), 
+                ("߃", "3"), 
+                ("߄", "4"), 
+                ("߅", "5")  , 
+                ("߆", "6"), 
+                ("߇", "7"), 
+                ("߈", "8"), 
+                ("߉", "9"), 
+
             ]
         )
 
